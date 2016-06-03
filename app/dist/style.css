@@ -10,9 +10,9 @@ body {
   letter-spacing: 2px; }
 
 .logo {
-  background-image: url("logo.png");
+  background-image: url("logo-header.png");
   background-size: contain;
-  height: 50px;
+  height: 200px;
   width: 400px;
   margin: auto;
   background-position: center;
@@ -238,18 +238,6 @@ body {
   border-bottom: 1px solid #e2e3e4;
   margin-top: 15px; }
 
-.menu-item {
-  display: inline-block;
-  padding: 15px 30px;
-  font-size: 12px;
-  -moz-transition: color 0.1s ease-in-out;
-  -o-transition: color 0.1s ease-in-out;
-  -webkit-transition: color 0.1s ease-in-out;
-  transition: color 0.1s ease-in-out;
-  cursor: pointer; }
-  .menu-item:hover {
-    color: #939b9f; }
-
 .product .product-inner {
   cursor: pointer;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15), 0 0 1px 0 rgba(0, 0, 0, 0.15);
@@ -280,3 +268,15 @@ body {
 
 .product-inner:hover .product-price {
   opacity: 1; }
+
+.menu-item {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 12px;
+  -moz-transition: color 0.1s ease-in-out;
+  -o-transition: color 0.1s ease-in-out;
+  -webkit-transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
+  cursor: pointer; }
+  .menu-item:hover {
+    color: #939b9f; }
