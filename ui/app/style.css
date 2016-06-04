@@ -11,6 +11,10 @@ body {
     letter-spacing: 3px;
 }
 
+h2 {
+    font-weight: 100;
+}
+
 .logo {
     background-image:    url("images/logo-header.png");
     background-size:     contain;
@@ -26,6 +30,10 @@ body {
     padding-top: 15px;
     max-width:   1200px;
     margin:      auto;
+}
+
+.footer {
+    margin-top: 80px;
 }
 
 /* MENU */
@@ -78,6 +86,26 @@ body {
     width:    calc(100% - 30px);
     opacity:  0;
 
+}
+
+.insta-container {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    border-top: 1px solid #e2e3e4;
+    border-bottom: 1px solid #e2e3e4;
+}
+
+.insta-image {
+    width: 178px;
+    height: 178px;
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.insta-text {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 img {
