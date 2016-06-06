@@ -11,6 +11,10 @@ body {
     letter-spacing: 3px;
 }
 
+h1 {
+    font-weight: 100;
+}
+
 h2 {
     font-weight: 100;
 }

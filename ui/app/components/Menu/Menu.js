@@ -6,12 +6,17 @@ class Menu extends Component {
         var menuItems = [
             {name: 'NEW', link: 'new'},
             {name: 'SHOP', link: 'shop'},
-            {name: 'ETSY', link: 'etsy'},
+            {name: 'ETSY', url: 'https://www.etsy.com/uk/shop/ThistlePaperCo'},
             {name: 'BLOG', link: 'blog'}
         ];
 
-        var items = menuItems.map(function (item) {
-            return <Link className="menu-item" to={'/' + item.link} key={item.name}>{item.name}</Link>
+        var items = menuItems.map((item) => {
+            if (item.url) {
+                return <a className="menu-item" target="_blank" href={item.url} key={item.name}>{item.name}</a>
+            }
+            else {
+                return <Link className="menu-item" to={'/' + item.link} key={item.name}>{item.name}</Link>
+            }
         });
 
         return (

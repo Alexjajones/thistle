@@ -6,6 +6,8 @@ import Menu from './components/Menu/Menu'
 import Footer from './components/Footer/Footer'
 
 import Home from './pages/home/home'
+import Shop from './pages/shop/shop'
+import Product from './pages/product/product'
 
 class App extends Component {
     render() {
@@ -15,7 +17,7 @@ class App extends Component {
                     <IndexRoute component={Home}/>
                     <Route path='new' component={Home}/>
                     <Route path='shop' component={Shop}/>
-                    <Route path='etsy' component={Etsy}/>
+                    <Route path='shop/:id' component={Product}/>
                     <Route path='blog' component={Blog}/>
                     <Route path='*' component={NotFound}/>
                 </Route>
@@ -33,10 +35,7 @@ const Container = (props) => (
     </div>
 );
 
-const New = () => <h1>New Page</h1>
-const Shop = () => <h1>Shop Page</h1>
-const Etsy = () => <h1>Etsy Page</h1>
-const Blog = () => <h1>Blog Page</h1>
-const NotFound = () => <h1>404.. This page is not found!</h1>
+const Blog = () => <h1>Blog Page</h1>;
+const NotFound = () => <h1>This page is not found, go back!</h1>;
 
 export default App

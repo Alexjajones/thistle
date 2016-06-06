@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import $ from 'jquery'
 
 class Instagram extends Component {
@@ -22,8 +23,8 @@ class Instagram extends Component {
 
     render() {
         if (this.state && this.state.items) {
-            // Removing invalid items.
-            var filtered = this.state.items.filter(function(item) {
+            // Removing invalid items (videos etc)
+            var filtered = this.state.items.filter(function (item) {
                 return item && item.images && item.type !== 'video';
             });
 
@@ -33,10 +34,9 @@ class Instagram extends Component {
             }
 
             var images = filtered.map(function (item) {
-                return <img key={item.id} className="insta-image col-1-6" src={item.images.standard_resolution.url} onClick={openInsta}/>
+                return <img key={item.id} className="insta-image col-1-6" src={item.images.standard_resolution.url} onClick={openInsta}/>;
 
-                function openInsta()
-                {
+                function openInsta() {
                     window.open(item.link, '_blank');
                 }
             });
