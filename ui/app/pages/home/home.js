@@ -1,34 +1,10 @@
 import React, { Component } from 'react'
-import ProductList from '../../components/ProductList/ProductList'
 
 class Home extends Component {
     render() {
-        var products = [{name: 'Lovely Picture', price: '13.41', category: 'Gift Card'}, {
-            name: 'Really nice thing',
-            price: '2.52',
-            category: 'Gift Card',
-            id: 0
-        }, {name: 'Lovely Picture', price: '13.41', category: 'Gift Card'}, {
-            name: 'Really nice thing',
-            price: '2.52',
-            category: 'Gift Card',
-            id: 1
-        }, {name: 'Lovely Picture', price: '13.41', category: 'Gift Card'}, {
-            name: 'Really nice thing',
-            price: '2.52',
-            category: 'Gift Card',
-            id: 2
-        }, {name: 'Lovely Picture', price: '13.41', category: 'Gift Card'}, {
-            name: 'Really nice thing',
-            price: '2.52',
-            category: 'Gift Card',
-            id: 3
-        }];
-
         return (
-            <div>
-                <h4>Home</h4>
-                <ProductList items={products}/>
+            <div className="home">
+                <img className="home-image" src="https://m.riflepaperco.com/media/wysiwyg/hero/2017-Planner-Collection-F.jpg" alt="home image"/>
             </div>
         )
     }

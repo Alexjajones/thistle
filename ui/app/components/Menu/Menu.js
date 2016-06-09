@@ -6,8 +6,8 @@ class Menu extends Component {
         var menuItems = [
             {name: 'NEW', link: 'new'},
             {name: 'SHOP', link: 'shop'},
-            {name: 'ETSY', url: 'https://www.etsy.com/uk/shop/ThistlePaperCo'},
-            {name: 'BLOG', link: 'blog'}
+            {name: 'BLOG', link: 'blog'},
+            {name: 'ETSY', url: 'https://www.etsy.com/uk/shop/ThistlePaperCo'}
         ];
 
         var items = menuItems.map((item) => {

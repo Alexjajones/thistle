@@ -9,7 +9,6 @@ class ProductList extends Component {
 
         return (
             <div>
-                <h4>Products</h4>
                 <div className="grid">
                     {listItems}
                 </div>
