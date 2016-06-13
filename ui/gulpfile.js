@@ -15,7 +15,7 @@ gulp.task('build-bundle', function (cb) {
 });
 
 gulp.task('production-files', function () {
-    return gulp.src(['app/bundle.js', 'app/index.html', 'app/style.css'])
+    return gulp.src(['app/bundle.js', 'app/index.html', 'app/style.css', 'app/favicon.ico'])
         .pipe(gulp.dest('../server/public'))
 });
 
