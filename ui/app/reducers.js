@@ -1,5 +1,4 @@
-//import { combineReducers, createStore } from 'redux';
-const { combineReducers, createStore } = Redux;
+import { combineReducers, createStore } from 'redux';
 
 const bag = (state = {showing: false, items: []}, action) => {
     switch (action.type) {
@@ -16,24 +15,8 @@ const bag = (state = {showing: false, items: []}, action) => {
     }
 };
 
-const App = combineReducers({
+const store = combineReducers({
     bag: bag
 });
 
-var store = createStore(App);
-
-store.bag.subscribe();
-
-store.dispatch({
-    type: 'ADD_ITEM',
-    item: {name: 'test123'}
-});
-
-
-store.dispatch({
-    type: 'TOGGLE_BAG'
-});
-
-console.log(store.getState());
-
-//export default App;
+export default createStore(store);

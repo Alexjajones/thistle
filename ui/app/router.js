@@ -1,6 +1,10 @@
-import React, { Component } from 'react'
-import { Router, Route, Link, IndexRoute, hashHistory, browserHistory, DefaultRoute } from 'react-router'
+import React, { Component, PropTypes } from 'react';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import createBrowserHistory from 'history/lib/createBrowserHistory';
+import { Provider } from 'react-redux';
+import store from './reducers';
 
+// Pages
 import Container from './app'
 import Home from './pages/home/home'
 import Shop from './pages/shop/shop'
@@ -8,21 +12,23 @@ import Product from './pages/product/product'
 import Blog from './pages/blog/blog'
 import NotFound from './pages/notfound/notfound'
 
-class App extends Component {
+export default class Root extends Component {
     render() {
         return (
-            <Router history={hashHistory}>
-                <Route path='/' component={Container}>
-                    <IndexRoute component={Home}/>
-                    <Route path='new' component={Home}/>
-                    <Route path='shop' component={Shop}/>
-                    <Route path='shop/:id' component={Product}/>
-                    <Route path='blog' component={Blog}/>
-                    <Route path='*' component={NotFound}/>
-                </Route>
-            </Router>
-        )
+            <div>
+                <Provider store={store}>
+                    <Router history={hashHistory}>
+                        <Route path='/' component={Container}>
+                            <IndexRoute component={Home}/>
+                            <Route path='new' component={Home}/>
+                            <Route path='shop' component={Shop}/>
+                            <Route path='shop/:id' component={Product}/>
+                            <Route path='blog' component={Blog}/>
+                            <Route path='*' component={NotFound}/>
+                        </Route>
+                    </Router>
+                </Provider>
+            </div>
+        );
     }
 }
-
-export default App

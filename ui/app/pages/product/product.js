@@ -1,25 +1,13 @@
 import React, { Component } from 'react'
 import ApiProduct from '../../api/Product'
+import { connect } from 'react-redux';
 
 class Product extends Component {
     constructor() {
         super();
-
-        this.ApiProduct = new ApiProduct;
     }
 
     componentWillMount() {
-
-        //this.ApiProduct.fetch(this.props.params.id).done(success, error);
-        //
-        //function success(result) {
-        //    this.setState({product: result})
-        //}
-        //
-        //function error(err) {
-        //    console.log(err)
-        //}
-
         this.setState({
             product: {
                 name: 'Really nice thing',
@@ -48,11 +36,29 @@ class Product extends Component {
                     <p className="product-detail category">{product.description}</p>
                     <p className="product-detail category">{product.format}</p>
                     <p className="product-detail category">Made in England</p>
-                    <div className="btn add-to-cart">ADD TO BAG</div>
+                    <div className="btn add-to-cart" onClick={this.addProduct.bind(this)}>ADD TO BAG</div>
                 </div>
             </div>
-        )
+        );
+    }
+
+    addProduct() {
+        this.props.onClick(this.state.product);
     }
 }
 
-export default Product;
+const mapStateToProps = (state) => {
+    return {
+        bag: state.bag
+    }
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onClick: (product) => {
+            dispatch({type: "ADD_ITEM", item: product})
+        }
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Product);
