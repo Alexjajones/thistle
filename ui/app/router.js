@@ -4,6 +4,8 @@ import createBrowserHistory from 'history/lib/createBrowserHistory';
 import { Provider } from 'react-redux';
 import store from './reducers';
 
+console.log(store, store.getState());
+
 // Pages
 import Container from './app'
 import Home from './pages/home/home'

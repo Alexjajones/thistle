@@ -15,8 +15,48 @@ const bag = (state = {showing: false, items: []}, action) => {
     }
 };
 
+var productsInitState = [{
+    name: 'Really nice thing eee',
+    price: '2.52',
+    category: 'Gift Card',
+    id: 0
+}, {
+    name: 'Really nice thing',
+    price: '2.52',
+    category: 'Gift Card',
+    id: 1
+}, {
+    name: 'Really nice thing',
+    price: '2.52',
+    category: 'Gift Card',
+    id: 2
+}, {
+    name: 'Really nice thing',
+    price: '2.52',
+    category: 'Gift Card',
+    id: 4
+}, {
+    name: 'Really nice thing',
+    price: '2.52',
+    category: 'Gift Card',
+    id: 5
+}, {
+    name: 'Really nice thing',
+    price: '2.52',
+    category: 'Gift Card',
+    id: 6
+}];
+
+const products = (state = productsInitState, action) => {
+    switch (action.type) {
+        default:
+            return state;
+    }
+};
+
 const store = combineReducers({
-    bag: bag
+    bag,
+    products
 });
 
 export default createStore(store);

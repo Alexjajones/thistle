@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Router, Route, Link, IndexRoute, hashHistory, browserHistory, DefaultRoute } from 'react-router'
+import { Router, Route, Link} from 'react-router'
 
 class Menu extends Component {
     render() {
