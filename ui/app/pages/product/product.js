@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 
+import bag from '../../components/Bag/index';
 import Product from '../../components/Product/Product';
 
 class ProductPage extends Component {
@@ -9,26 +10,20 @@ class ProductPage extends Component {
     }
 
     componentWillMount() {
-        var products = this.props.products;
-        var id = this.props.params.id;
-
-        this.item = products.filter((item) => {
-            return item.id == id
-        })[0];
     }
 
     render() {
         return (
             <div>
-                <Product product={this.item}/>
+                <Product product={this.props.product}/>
             </div>
         );
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, { params }) => {
     return {
-        products: state.products
+        product: bag.selectors.get(params.id, state.products)
     }
 };
 

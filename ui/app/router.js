@@ -7,7 +7,7 @@ import store from './reducers';
 console.log(store, store.getState());
 
 // Pages
-import Container from './app'
+import Container from './pages/container/container'
 import Home from './pages/home/home'
 import Shop from './pages/shop/shop'
 import Product from './pages/product/product'

@@ -1,15 +1,8 @@
 import { combineReducers, createStore } from 'redux';
+import bag from './components/Bag/index';
 
-const bag = (state = {showing: false, items: []}, action) => {
+const products = (state = productsInitState, action) => {
     switch (action.type) {
-        case 'ADD_ITEM':
-            return Object.assign({}, {showing: state.showing, items: [...state.items, action.item]});
-        case 'REMOVE_ITEM':
-            return;
-        case 'UPDATE_ITEM':
-            return;
-        case 'TOGGLE_BAG':
-            return Object.assign({}, {showing: !state.showing, items: state.items});
         default:
             return state;
     }
@@ -47,15 +40,8 @@ var productsInitState = [{
     id: 6
 }];
 
-const products = (state = productsInitState, action) => {
-    switch (action.type) {
-        default:
-            return state;
-    }
-};
-
 const store = combineReducers({
-    bag,
+    [bag.constants.NAME]: bag.reducer,
     products
 });
 

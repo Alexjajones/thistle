@@ -2,10 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 
 class Bag extends Component {
-    constructor() {
-        super();
-    }
-
     render() {
         const { bag } = this.props;
 
@@ -17,6 +13,11 @@ class Bag extends Component {
     }
 }
 
-export default connect(state => ({
-    bag: state.bag
-}))(Bag);
+const mapStateToProps = (state) => {
+    return {
+        bag: state.bag
+    }
+};
+
+
+export default connect(mapStateToProps)(Bag);

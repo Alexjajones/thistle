@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Bag from '../Bag/Bag'
+import Bag from '../Bag/components'
 
 class Header extends Component {
     render() {

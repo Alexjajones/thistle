@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 
+import bag from '../Bag';
+
 class Product extends Component {
     constructor() {
         super();
@@ -43,7 +45,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onClick: (product) => {
-            dispatch({type: "ADD_ITEM", item: product})
+            dispatch( bag.actions.add(product) );
         }
     }
 };
