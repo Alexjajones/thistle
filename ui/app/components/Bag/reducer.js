@@ -1,14 +1,17 @@
 import t from './actionTypes';
+import m from './model';
 
 var initState = {
     showing: false,
-    items: []
+    items: [],
+    total: 0
 };
 
 export default (state = initState, action) => {
     switch (action.type) {
         case t.ADD:
-            return Object.assign({}, {showing: state.showing, items: [...state.items, action.item]});
+            let items = [...state.items, action.item];
+            return Object.assign({}, state, {items: items, total: m.calcTotal(items)});
         case t.REMOVE:
             return state;
             return;

@@ -183,7 +183,14 @@ h2 {
     padding: 30px;
     text-align: center;
     color: goldenrod;
+    cursor: pointer;
 }
+
+a:-webkit-any-link {
+    text-decoration: none;
+    color: #484e51;
+}
+
 
 [class*='grid'],
 [class*='col-'],

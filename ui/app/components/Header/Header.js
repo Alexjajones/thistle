@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Bag from '../Bag/components'
+import BagList from '../BagList/components'
 
 class Header extends Component {
     render() {
@@ -12,6 +13,7 @@ class Header extends Component {
                     </div>
                     <div className="col-1-3 bag-container">
                         <Bag />
+                        <BagList />
                     </div>
                 </div>
                 <div className="logo"></div>
