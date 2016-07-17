@@ -12,17 +12,20 @@ export default (state = initState, action) => {
         case t.ADD:
             let items = [...state.items, action.item];
             return Object.assign({}, state, {items: items, total: m.calcTotal(items)});
+
         case t.REMOVE:
-            return state;
-            return;
+            let newItems = m.removeProduct(state.items, action.item.id);
+            return Object.assign({}, state, {items: newItems, total: m.calcTotal(newItems)});
+
         case t.UPDATE:
             return state;
-            return;
+
         case t.EMPTY:
             return state;
-            return;
+
         case t.TOGGLE:
             return Object.assign({}, {showing: !state.showing, items: state.items});
+
         default:
             return state;
     }
