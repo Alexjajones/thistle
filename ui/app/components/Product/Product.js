@@ -19,12 +19,18 @@ class Product extends Component {
                     <img className="product-image" src={product.image}/>
                 </div>
                 <div className="col-1-3 product-details">
+                    <p className="product-info header">{product.name}</p>
+                    <p className="product-info category">{product.category}</p>
+                    <p className="product-info category">{product.description}</p>
+                    <p className="product-info category">{product.format}</p>
+                    <p className="product-info category">Made in England</p>
+
                     <div className="price">£{product.price}</div>
-                    <p className="product-detail header">{product.name}</p>
-                    <p className="product-detail category">{product.category}</p>
-                    <p className="product-detail category">{product.description}</p>
-                    <p className="product-detail category">{product.format}</p>
-                    <p className="product-detail category">Made in England</p>
+                    <div className="product-detail category">
+                        <p className="quantity-title">Quantity</p>
+                        <input className="quantity-input" type="number" defaultValue="1"/>
+                    </div>
+
                     <div className="btn add-to-cart" onClick={this.addProduct.bind(this)}>ADD TO BAG</div>
                 </div>
             </div>

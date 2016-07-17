@@ -3,13 +3,14 @@ import { connect } from 'react-redux';
 
 class BagItem extends Component {
     render() {
-
         var id = this.props.index;
 
-        console.log(this.props.items, id);
+        //{this.props.items[id].name}
 
         return (
-            <div className="bag-item">{this.props.items[id].name}</div>
+            <div className="bag-item">
+
+            </div>
         )
     }
 }
