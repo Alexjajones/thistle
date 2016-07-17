@@ -12,8 +12,9 @@ class BagList extends Component {
 
         return (
             <div className="bag-list">
+                <h1>Shopping Bag</h1>
                 {bagItems}
-                <div className="check-out-btn">Total: £{this.props.bag.total}</div>
+                <div className="total">Total: £{this.props.bag.total}</div>
                 <div className="check-out-btn">Go to checkout</div>
             </div>
         )

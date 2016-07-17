@@ -216,6 +216,47 @@ a:-webkit-any-link {
     color: #484e51;
 }
 
+.bag-list {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .15), 0 0 1px 0 rgba(0, 0, 0, .15);
+    margin-bottom: 2px;
+    position: absolute;
+    width: 500px;
+    left: 50%;
+    margin-left: -250px;
+}
+
+.check-out-btn {
+    padding:    30px 10px 10px;
+    text-align: center;
+    color:      goldenrod;
+    cursor:     pointer;
+}
+
+.bag-item .remove-item {
+    display: inline-block;
+}
+
+.bag-item .item-name {
+    display: inline-block;
+}
+
+.bag-item .item-image {
+    height: 150px;
+}
+
+.item-image-container {
+    width: 40%;
+    display: inline-block;
+}
+
+.item-details-container {
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 30px;
+}
 
 [class*='grid'],
 [class*='col-'],

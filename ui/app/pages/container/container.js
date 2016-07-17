@@ -3,9 +3,11 @@ import React, { Component } from 'react'
 import Header from '../../components/Header/Header'
 import Menu from '../../components/Menu/Menu'
 import Footer from '../../components/Footer/Footer'
+import BagList from '../../components/BagList/components'
 
 const Container = (props) => (
     <div>
+        <BagList />
         <Header />
         <Menu />
         {props.children}

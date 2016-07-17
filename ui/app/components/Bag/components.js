@@ -1,13 +1,19 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 
+var FontAwesome = require('react-fontawesome');
+
+//shopping-bag
 class Bag extends Component {
     render() {
         const { bag } = this.props;
 
         return (
             <div className="header-bag">
-                <div className="bag">BAG {bag.items.length}</div>
+                <div className="bag">
+                    <FontAwesome name="shopping-bag"/>
+                    BAG {bag.items.length}
+                </div>
             </div>
         )
     }
