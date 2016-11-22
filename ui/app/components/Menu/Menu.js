@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
-import { Router, Route, Link} from 'react-router'
+import React, {Component} from 'react'
+import {Link} from 'react-router'
 
 class Menu extends Component {
     render() {
         var menuItems = [
             {name: 'NEW', link: 'new'},
-            {name: 'SHOP', link: 'shop'},
-            {name: 'BLOG', link: 'blog'},
+            {name: 'BLOG', url: 'https://thistlepaperco.format.com/thistlepaperco'},
             {name: 'ETSY', url: 'https://www.etsy.com/uk/shop/ThistlePaperCo'}
         ];
 

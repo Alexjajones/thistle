@@ -166,6 +166,7 @@ h2 {
 
 .product-details p {
     margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .product-details .header {
@@ -176,13 +177,85 @@ h2 {
     text-align: right;
     margin-top: 30px;
     margin-right: 15px;
-    font-weight: bold;
+    /*font-size: 20px;*/
+}
+
+.product-info {
+    margin-bottom: 15px;
+}
+
+.product-info.header {
+    margin-top: 40px;
 }
 
 .add-to-cart {
-    padding: 30px;
+    padding: 35px;
     text-align: center;
     color: goldenrod;
+    cursor: pointer;
+}
+
+.quantity-title {
+    display: inline-block;
+}
+
+.quantity-input {
+    display: inline-block;
+    margin-left: 35px;
+    border: none;
+    max-width: 25px;
+    outline: none;
+}
+
+p.product-info {
+    margin-bottom: 15px;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+    color: #484e51;
+}
+
+.bag-list {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .15), 0 0 1px 0 rgba(0, 0, 0, .15);
+    margin-bottom: 2px;
+    position: absolute;
+    width: 500px;
+    left: 50%;
+    margin-left: -250px;
+}
+
+.check-out-btn {
+    padding:    30px 10px 10px;
+    text-align: center;
+    color:      goldenrod;
+    cursor:     pointer;
+}
+
+.bag-item .remove-item {
+    display: inline-block;
+}
+
+.bag-item .item-name {
+    display: inline-block;
+}
+
+.bag-item .item-image {
+    height: 150px;
+}
+
+.item-image-container {
+    width: 40%;
+    display: inline-block;
+}
+
+.item-details-container {
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 30px;
 }
 
 [class*='grid'],

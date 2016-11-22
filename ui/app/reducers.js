@@ -3,6 +3,8 @@ import bag from './components/Bag/index';
 
 const products = (state = productsInitState, action) => {
     switch (action.type) {
+        case 'UPDATE_LIST':
+
         default:
             return state;
     }

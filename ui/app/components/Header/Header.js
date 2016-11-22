@@ -6,18 +6,19 @@ class Header extends Component {
 
         return (
             <div className="header-container">
-                <div className="top-bar grid">
-                    <div className="col-2-3 announcement">
-                        FREE SHIPPING FOR ORDERS OVER £75
-                    </div>
-                    <div className="col-1-3 bag-container">
-                        <Bag />
-                    </div>
-                </div>
-                <div className="logo"></div>
+                <img className="logo" src="../../images/logo-header.png" alt="logo"/>
             </div>
         )
     }
 }
+
+// <div className="col-1-3 bag-container">
+//     <Bag />
+// </div>
+// <div className="top-bar grid">
+//     <div className="col-2-3 announcement">
+//         Cathy smells of poop
+//     </div>
+// </div>
 
 export default Header

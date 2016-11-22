@@ -1,10 +1,29 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
 class Home extends Component {
     render() {
+        let main = 'christmas-mini';
+
+        let images = [
+            {src: 'christmas-bambi', url: 'https://www.etsy.com/uk/shop/ThistlePaperCo'},
+            {src: 'christmas-mittens', url: 'https://www.etsy.com/uk/shop/ThistlePaperCo?section_id=18064499'},
+            {src: 'christmas-nutcracker', url: 'https://www.etsy.com/uk/shop/ThistlePaperCo?section_id=18064499'},
+        ];
+
+        const goToPage = (url) => window.open(url, '_blank');
+
+        var imagesEls = images.map((image) => {
+            return (
+                <div className="col-1-3" onClick={goToPage(image.url)}>
+                    <img className="home-image" src={'../../images/' + image.src + '.png'}/>
+                </div>
+            );
+        });
+
         return (
-            <div className="home">
-                <img className="home-image" src="https://m.riflepaperco.com/media/wysiwyg/hero/2017-Planner-Collection-F.jpg" alt="home image"/>
+            <div className="home grid">
+                <img className="col-1-1 home-image-main" src={"../../images/" + main + '.jpg'} alt="home image"/>
+                {imagesEls}
             </div>
         )
     }

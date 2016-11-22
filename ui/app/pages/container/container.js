@@ -7,7 +7,6 @@ import BagList from '../../components/BagList/components'
 
 const Container = (props) => (
     <div>
-        <BagList />
         <Header />
         <Menu />
         {props.children}
@@ -16,3 +15,5 @@ const Container = (props) => (
 );
 
 export default Container
+
+// <BagList />
