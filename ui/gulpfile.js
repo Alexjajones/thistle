@@ -7,7 +7,7 @@ gulp.task('default', function (callback) {
 });
 
 gulp.task('build-bundle', function (cb) {
-    exec('webpack --optimize-minimize', function (err, stdout, stderr) {
+    exec('webpack --optimize-minimize -p --define process.env.NODE_ENV="production"', function (err, stdout, stderr) {
         console.log(stdout);
         console.log(stderr);
         cb(err);

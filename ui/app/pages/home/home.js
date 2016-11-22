@@ -11,16 +11,10 @@ class Home extends Component {
         ];
 
         var imagesEls = images.map((image) => {
-
-            function goTo() {
-                console.log(image.url);
-                window.open(image.url, '_blank')
-            }
-
             return (
-                <div className="col-1-3" onClick={goTo}>
+                <a className="col-1-3" target="_blank" href={image.url} key={image.src}>
                     <img className="home-image" src={'../../images/' + image.src + '.png'}/>
-                </div>
+                </a>
             );
         });
 
