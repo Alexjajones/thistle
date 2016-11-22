@@ -10,11 +10,9 @@ class Home extends Component {
             {src: 'christmas-nutcracker', url: 'https://www.etsy.com/uk/shop/ThistlePaperCo?section_id=18064499'},
         ];
 
-        const goToPage = (url) => window.open(url, '_blank');
-
         var imagesEls = images.map((image) => {
             return (
-                <div className="col-1-3" onClick={goToPage(image.url)}>
+                <div className="col-1-3" onClick={ () => window.open(image.url, '_blank') }>
                     <img className="home-image" src={'../../images/' + image.src + '.png'}/>
                 </div>
             );

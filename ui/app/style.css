@@ -75,6 +75,7 @@ h2 {
 
 .home-image {
     width: 100%;
+    cursor: pointer;
 }
 
 /* PRODUCT */
