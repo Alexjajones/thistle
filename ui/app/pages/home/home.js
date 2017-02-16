@@ -2,12 +2,12 @@ import React, {Component} from 'react'
 
 class Home extends Component {
     render() {
-        let main = 'christmas-mini';
+        let main = 'feb-cover';
 
         let images = [
-            {src: 'christmas-bambi', url: 'https://www.etsy.com/uk/shop/ThistlePaperCo'},
-            {src: 'christmas-mittens', url: 'https://www.etsy.com/uk/shop/ThistlePaperCo?section_id=18064499'},
-            {src: 'christmas-nutcracker', url: 'https://www.etsy.com/uk/shop/ThistlePaperCo?section_id=18064499'},
+            {src: 'whimsical', url: 'https://www.etsy.com/uk/listing/512628859/watercolour-whimsical-calligraphy?ref=shop_home_active_4'},
+            {src: 'minimal', url: 'https://www.etsy.com/uk/listing/507647517/watercolour-calligraphy-wedding-set?ref=related-7'},
+            {src: 'monogram', url: 'https://www.etsy.com/uk/listing/499132130/watercolour-calligraphy-custom-monogram?ref=related-5'},
         ];
 
         var imagesEls = images.map((image) => {
@@ -20,7 +20,7 @@ class Home extends Component {
 
         return (
             <div className="home grid">
-                <img className="col-1-1 home-image-main" src={"../../images/" + main + '.jpg'} alt="home image"/>
+                <img className="col-1-1 home-image-main" src={"../../images/" + main + '.png'} alt="home image"/>
                 {imagesEls}
             </div>
         )
